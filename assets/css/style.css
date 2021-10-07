@@ -184,6 +184,7 @@ header .search i {
 }
 
 .banner .content .play {
+  cursor: pointer;
   position: absolute;
   bottom: -100px;
   left: 0;
@@ -232,11 +233,6 @@ header .search i {
   opacity: 0;
 }
 
-.trailer .active {
-  visibility: visibility;
-  opacity: 1;
-}
-
 .trailer video {
   max-width: 900px;
   outline: none;
@@ -250,5 +246,72 @@ header .search i {
   height: 30px;
   cursor: pointer;
   color: #fff;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 46.1875em) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header a {
+    margin-bottom: 20px;
+  }
+  header ul {
+    margin-bottom: 25px;
+  }
+  header ul li {
+    padding: 10px 0;
+  }
+  .banner .content img {
+    display: none;
+  }
+  .banner .content h4 {
+    margin-top: 100px;
+  }
+  .banner .content p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 12;
+    overflow: hidden;
+  }
+  .trailer .vid {
+    width: 85%;
+  }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header a {
+    margin-bottom: 20px;
+  }
+  header ul {
+    margin-bottom: 25px;
+  }
+  .banner .movi {
+    margin-top: -60px;
+    margin-bottom: 50px;
+  }
+  .banner h4 {
+    margin-bottom: 50px;
+  }
+  .banner .buttons {
+    margin-top: 50px;
+  }
+  .trailer .vid {
+    width: 85%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

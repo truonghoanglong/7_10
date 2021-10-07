@@ -145,6 +145,7 @@ header{
             }
         }
         .play{
+            cursor: pointer;
             position: absolute;
             bottom: -100px;
             left: 0;
@@ -162,6 +163,7 @@ header{
             }
         }
     }
+    
 }
 .trailer{
     position: fixed;
@@ -177,14 +179,10 @@ header{
     backdrop-filter: blur(20px);
     visibility: hidden;
     opacity: 0;
-    .active{
-        visibility: visibility;
-        opacity: 1;
-    }
+    
     video{
         max-width:900px;
         outline:none;
-
     }
     img{
         position:absolute;
@@ -196,7 +194,76 @@ header{
         color:#fff;
     }
 }
-.active{
-    visibility: visibility;
+.active {
+    visibility: visible;
     opacity: 1;
+}
+
+@media only screen and (max-width: 46.1875em) {
+    header{
+        flex-direction: column;
+        a{
+            margin-bottom: 20px;
+        }
+        ul{
+            margin-bottom: 25px;
+            
+            li{
+                padding: 10px 0;
+            }
+        }
+    }
+    .banner{
+        .content{
+            
+            img{
+                display: none;
+            }
+            h4{
+                margin-top: 100px;
+            }
+            p{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 12;
+                overflow: hidden;
+            }
+        }
+    }
+    .trailer{
+        .vid{
+            width: 85%;
+        }
+    }
+    
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    header{
+        flex-direction: column;
+        a{
+            margin-bottom: 20px;
+        }
+        ul{
+            margin-bottom: 25px;
+        }
+    }
+    .banner{
+        .movi{
+            margin-top: -60px;
+            margin-bottom: 50px;
+        }
+        h4{
+            margin-bottom: 50px;
+        }
+        .buttons{
+            margin-top: 50px;
+        }
+    }
+    .trailer{
+        .vid{
+            width: 85%;
+        }
+    }
 }
